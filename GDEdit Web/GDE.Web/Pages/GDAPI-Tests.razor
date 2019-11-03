@@ -24,6 +24,7 @@
         databaseCollection[0].UserLevels = new LevelCollection();
 
         level = databaseCollection[0].CreateLevel("Web Testing Level", "Testing purposes for the web!", levelString);
+        level.InitializeLoadingLevelString(); // Call this manually since CreateLevel does not call it.
         
         LevelTitle = level.Name;
         LevelDescription = level.Description;
