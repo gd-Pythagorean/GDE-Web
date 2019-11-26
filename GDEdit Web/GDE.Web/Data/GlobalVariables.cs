@@ -22,7 +22,8 @@ namespace GDE.Web.Data
         public static Dictionary<LinkItems, string[]> Links = new Dictionary<LinkItems, string[]>
         {
             { 
-                LinkItems.Home, new []
+                LinkItems.Home,
+                new []
                 {
                     "",
                     "News",
@@ -33,14 +34,16 @@ namespace GDE.Web.Data
                 }
             },
             {
-                LinkItems.Levels, new []
+                LinkItems.Levels, 
+                new []
                 {
                     "gdapi",
                     "Listing"
                 }
             },
             {
-                LinkItems.Community, new []
+                LinkItems.Community,
+                new []
                 {
                     "fetchdata",
                     "Forums",
@@ -48,7 +51,8 @@ namespace GDE.Web.Data
                 }
             },
             {
-                LinkItems.Help, new []
+                LinkItems.Help, 
+                new []
                 {
                     "counter",
                     "Wiki",
