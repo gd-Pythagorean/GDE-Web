@@ -1,0 +1,72 @@
+﻿/*  REGULAR  */
+@font-face {
+    font-family: "Purista";
+    src: url("../Fonts/Purista Medium.otf") format("opentype");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Purista";
+    src: url("../Fonts/Purista Bold.otf") format("opentype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Purista";
+    src: url("../Fonts/Purista SemiBold.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Purista";
+    src: url("../Fonts/Purista Light.otf") format("opentype");
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Purista";
+    src: url("../Fonts/Purista Thin.otf") format("opentype");
+    font-weight: 100;
+    font-style: normal;
+}
+
+/*  ITALICS  */
+
+@font-face {
+    font-family: "Purista";
+    src: url("../Fonts/Purista Bold Italic.otf") format("opentype");
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Purista";
+    src: url("../Fonts/Purista SemiBold Italic.otf") format("opentype");
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Purista";
+    src: url("../Fonts/Purista Medium Italic.otf") format("opentype");
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Purista";
+    src: url("../Fonts/Purista Light Italic.otf") format("opentype");
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Purista";
+    src: url("../Fonts/Purista Thin Italic.otf") format("opentype");
+    font-weight: 100;
+    font-style: italic;
+}

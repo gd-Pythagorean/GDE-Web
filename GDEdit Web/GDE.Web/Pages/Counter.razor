@@ -1,4 +1,5 @@
 @page "/counter"
+@using GDE.Web.Data
 
 <h1>Counter</h1>
 
@@ -14,4 +15,11 @@
     {
         currentCount++;
     }
+
+    protected override void OnInit()
+    {
+        base.OnInit();
+        GlobalVariables.CurrentSection = GlobalVariables.LinkItems.Help;
+    }
+
 }
