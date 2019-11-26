@@ -57,13 +57,13 @@
 
 @code
 {
-	static int currentHue = 255;
+	private static int currentHue = 255;
 	
-	bool hideNavbar = false;
+	private bool hideNavbar = false;
 
-	string NavMenuCssClass => hideNavbar ? "vis" : null;
+	private string NavMenuCssClass => hideNavbar ? "vis" : null;
 
-	void ToggleNavMenu()
+	private void ToggleNavMenu()
 		=> hideNavbar = !hideNavbar;
 
 }
