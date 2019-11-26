@@ -9,4 +9,10 @@
       <PackageReference Include="GDAPI" Version="1.1.1" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Compile Update="Pages\Home\Index.razor.cs">
+        <DependentUpon>Index.razor</DependentUpon>
+      </Compile>
+    </ItemGroup>
+
 </Project>

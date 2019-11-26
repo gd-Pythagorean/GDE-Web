@@ -42,5 +42,6 @@ else
     protected override async Task OnInitAsync()
     {
         forecasts = await ForecastService.GetForecastAsync(DateTime.Now);
+        GlobalVariables.CurrentSection = GlobalVariables.LinkItems.Community;
     }
 }

@@ -1,6 +1,7 @@
 ﻿@page "/gdapi"
 @using GDAPI.Application;
 @using GDAPI.Objects.GeometryDash.General
+@using GDE.Web.Data
 
 <h1>@LevelTitle</h1>
 
@@ -21,6 +22,7 @@
 
     protected override void OnInit()
     {
+        GlobalVariables.CurrentSection = GlobalVariables.LinkItems.Levels;
         databaseCollection[0].UserLevels = new LevelCollection();
 
         level = databaseCollection[0].CreateLevel("Web Testing Level", "Testing purposes for the web!", levelString);

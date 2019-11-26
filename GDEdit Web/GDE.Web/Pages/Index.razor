@@ -1,5 +1,16 @@
 ﻿@page "/"
+@using GDE.Web.Data
 
 <h1>Hello, world!</h1>
 
 Welcome to your new app.
+
+@code 
+{
+    protected override void OnInit()
+    {
+        base.OnInit();
+        GlobalVariables.CurrentSection = GlobalVariables.LinkItems.Home;
+    }
+
+}

@@ -1,43 +1,69 @@
-<div class="top-row pl-4 navbar navbar-dark">
-    <a class="navbar-brand" href="">GDE.Web</a>
-    <button class="navbar-toggler" @onclick="@ToggleNavMenu">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+@using GDE.Web.Data
+<link rel="stylesheet" href="css/navbar.css"/>
+<style>
+	@switch (GlobalVariables.CurrentSection)
+	{
+		case GlobalVariables.LinkItems.Home:
+			currentHue = 255;
+			break;
+		case GlobalVariables.LinkItems.Levels:
+			currentHue = 200;
+			break;
+		case GlobalVariables.LinkItems.Community:
+			currentHue = 150;
+			break;
+		case GlobalVariables.LinkItems.Help:
+			currentHue = 20;
+			break;
+	}
+		
+	:root
+	{
+		--currentHue: @currentHue;
+	}
+</style>
+
+<div class="header-wrap">
+	<div class="header">
+		<div class="header-left">
+			<div class="header-logo">
+				<img src="media/logo.svg" alt="Logo" draggable="false">
+				<h2>GD Edit</h2>
+			</div>
+			<div class="header-items @NavMenuCssClass">
+				@foreach (var item in GlobalVariables.Links)
+				{
+					if (GlobalVariables.CurrentSection == item.Key)
+					{
+						<a class="header-item selected" href="@item.Value[0]">@item.Key.ToString()</a>
+					}
+					else
+					{
+						<a class="header-item" href="@item.Value[0]">@item.Key.ToString()</a>
+					}
+				}
+			</div>
+		</div>
+		<div class="header-account">
+			<div class="account-messages">
+				<img class="messages-icon" src="media/messages.svg" draggable="false" alt="messages">
+				<p class="messages-count">0</p>
+			</div>
+			<img class="account-icon" src="media/defaultProfile.png" draggable="false" alt="Profile">
+		</div>
+		<img class="header-menu-btn" id="navbarMenuBtn" src="media/menu.svg" alt="menu" @onclick="@ToggleNavMenu" />
+	</div>
 </div>
 
-<div class="@NavMenuCssClass" @onclick="@ToggleNavMenu">
-    <ul class="nav flex-column">
-        <li class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="oi oi-home" aria-hidden="true"></span> Home
-            </NavLink>
-        </li>
-        <li class="nav-item px-3">
-            <NavLink class="nav-link" href="counter">
-                <span class="oi oi-plus" aria-hidden="true"></span> Counter
-            </NavLink>
-        </li>
-        <li class="nav-item px-3">
-            <NavLink class="nav-link" href="fetchdata">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Fetch data
-            </NavLink>
-        </li>
-        <li class="nav-item px-3">
-            <NavLink class="nav-link" href="gdapi">
-                <span class="oi oi-terminal" aria-hidden="true"></span> GDAPI-Tests
-            </NavLink>
-        </li>
-    </ul>
-</div>
-
-@code 
+@code
 {
-    bool collapseNavMenu = true;
+	static int currentHue = 255;
+	
+	bool hideNavbar = false;
 
-    string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+	string NavMenuCssClass => hideNavbar ? "vis" : null;
 
-    void ToggleNavMenu()
-    {
-        collapseNavMenu = !collapseNavMenu;
-    }
+	void ToggleNavMenu()
+		=> hideNavbar = !hideNavbar;
+
 }
