@@ -1,25 +1,11 @@
 @using GDE.Web.Data
+@using GDE.Web.Pages
+
 <link rel="stylesheet" href="css/navbar.css"/>
 <style>
-	@switch (GlobalVariables.CurrentSection)
-	{
-		case GlobalVariables.LinkItems.Home:
-			currentHue = 255;
-			break;
-		case GlobalVariables.LinkItems.Levels:
-			currentHue = 200;
-			break;
-		case GlobalVariables.LinkItems.Community:
-			currentHue = 150;
-			break;
-		case GlobalVariables.LinkItems.Help:
-			currentHue = 20;
-			break;
-	}
-		
 	:root
 	{
-		--currentHue: @currentHue;
+		--currentHue: @Helper.SectionToHueMap(GlobalVariables.CurrentSection);
 	}
 </style>
 
@@ -57,13 +43,9 @@
 
 @code
 {
-	private static int currentHue = 255;
-	
 	private bool hideNavbar = false;
 
 	private string NavMenuCssClass => hideNavbar ? "vis" : null;
 
-	private void ToggleNavMenu()
-		=> hideNavbar = !hideNavbar;
-
+	private void ToggleNavMenu() => hideNavbar = !hideNavbar;
 }
