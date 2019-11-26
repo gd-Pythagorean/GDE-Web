@@ -21,34 +21,42 @@ namespace GDE.Web.Data
 
         public static Dictionary<LinkItems, string[]> Links = new Dictionary<LinkItems, string[]>
         {
-            { LinkItems.Home, new []
+            { 
+                LinkItems.Home, new []
+                {
+                    "",
+                    "News",
+                    "Team",
+                    "Changelog",
+                    "Download",
+                    "Search"
+                }
+            },
             {
-                "",
-                "News",
-                "Team",
-                "Changelog",
-                "Download",
-                "Search"
-            }},
-            { LinkItems.Levels, new []
+                LinkItems.Levels, new []
+                {
+                    "gdapi",
+                    "Listing"
+                }
+            },
             {
-                "gdapi",
-                "Listing"
-            }},
-            { LinkItems.Community, new []
+                LinkItems.Community, new []
+                {
+                    "fetchdata",
+                    "Forums",
+                    "Contests"
+                }
+            },
             {
-                "fetchdata",
-                "Forums",
-                "Contests"
-            }},
-            { LinkItems.Help, new []
-            {
-                "counter",
-                "Wiki",
-                "FAQ",
-                "Rules",
-                "No, Really, I need help!"
-            }}
+                LinkItems.Help, new []
+                {
+                    "counter",
+                    "Wiki",
+                    "FAQ",
+                    "Rules",
+                    "No, Really, I need help!"
+                }
+            }
         };
         
         public enum LinkItems

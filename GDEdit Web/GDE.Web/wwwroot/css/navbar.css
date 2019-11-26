@@ -24,12 +24,12 @@
     --b6: hsl(var(--currentHue), 10%, 10%);
 }
 
-body{
+body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
 }
 
-.header-wrap{
+.header-wrap {
     position: sticky;
     top: 0;
     left: 0;
@@ -42,14 +42,14 @@ body{
     box-shadow: 0 2px 5px rgba(0,0,0,.2);
 }
 
-.header-menu-btn{
+.header-menu-btn {
     height: 30px;
     filter: invert(100%);
     align-self: center;
     display: none;
 }
 
-.header{
+.header {
     display: flex;
     align-items: stretch;
     justify-content: space-around;
@@ -60,12 +60,12 @@ body{
     font-weight: 300;
 }
 
-.header-left{
+.header-left {
     display: flex;
     align-items: stretch;
 }
 
-.header-logo{
+.header-logo {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -73,14 +73,14 @@ body{
     border-right: 2px solid rgba(0,0,0,.1);
     margin: 10px 0;
 }
-.header-logo img{
+.header-logo img {
     width: 80px;
     margin-top: 20px;
     background: var(--darkHue);
     border: 10px solid var(--darkHue);
     border-radius: 10px;
 }
-.header-logo h2{
+.header-logo h2 {
     color: white;
     font-size: 25px;
     margin-left: 10px;
@@ -88,7 +88,7 @@ body{
     margin-bottom: 0;
 }
 
-.header-items{
+.header-items {
     display: flex;
     align-items: stretch;
     color: white;
@@ -97,7 +97,7 @@ body{
     opacity: 0.5;
 }
 
-.header-item{
+.header-item {
     padding: 0 15px;
     display: flex;
     flex-direction: column;
@@ -106,11 +106,11 @@ body{
     cursor: pointer;
     transition: 0.2s ease opacity;
 }
-.header-item:hover{
+.header-item:hover {
     opacity: 1 !important;
 }
 
-.header-item.selected::after{
+.header-item.selected::after {
     content: '';
     width: 100%;
     background: var(--userColor);
@@ -120,13 +120,13 @@ body{
     transform: translateY(5px);
 }
 
-.header-account{
+.header-account {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.account-messages{
+.account-messages {
     border: 2px solid rgba(255, 255, 255, .3);
     opacity: 0.7;
     padding: 7px 15px;
@@ -137,17 +137,17 @@ body{
     transition: 0.25s ease opacity;
     cursor: pointer;
 }
-.account-messages:hover{
+.account-messages:hover {
     opacity: 1;
 }
 
-.account-messages img{
+.account-messages img {
     height: 20px;
     margin-right: 10px;
     filter: invert(100%);
 }
 
-.account-messages p{
+.account-messages p {
     font-size: 20px;
     line-height: 20px;
     margin: -5px 0 0;
@@ -155,7 +155,7 @@ body{
     opacity: 0.7;
 }
 
-.account-icon{
+.account-icon {
     height: 40px;
     width: 40px;
     border-radius: 50%;
@@ -165,17 +165,17 @@ body{
     cursor: pointer;
     transition: 0.25s ease filter;
 }
-.account-icon:hover{
+.account-icon:hover {
     filter: brightness(90%)
 }
 
-@media screen and (max-width: 700px){
-    .header-menu-btn{
+@media screen and (max-width: 700px) {
+    .header-menu-btn {
         display: flex;
         margin-left: 20px;
         cursor: pointer;
     }
-    .header-items{
+    .header-items {
         position: absolute;
         right: 20px;
         top: 50px;
@@ -188,13 +188,13 @@ body{
         overflow: hidden;
         padding: 10px 0;
     }
-    .header-items.vis{
+    .header-items.vis {
         display: flex;
         animation: 0.25s ease menuPop;
         transform-origin: top right;
     }
 
-    .header-item{
+    .header-item {
         flex-direction: row;
         padding: 5px 20px;
         margin: 2px;
@@ -214,7 +214,7 @@ body{
         background-color: var(--userColor)
     }
 
-    .header-item.selected::after{
+    .header-item.selected::after {
         display: none;
     }
 
@@ -227,7 +227,7 @@ body{
     visibility: visible !important;
 }
 
-@keyframes menuPop{
+@keyframes menuPop {
     0%{
         opacity: 0;
         transform: scale(0.8);
