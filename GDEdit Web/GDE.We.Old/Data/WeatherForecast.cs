@@ -1,6 +1,6 @@
 using System;
 
-namespace GDE.Web.Data
+namespace GDE.We.Old.Data
 {
     public class WeatherForecast
     {

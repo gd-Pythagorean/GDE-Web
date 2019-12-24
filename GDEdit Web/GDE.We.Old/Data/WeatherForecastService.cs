@@ -2,7 +2,7 @@ using System;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace GDE.Web.Data
+namespace GDE.We.Old.Data
 {
     public class WeatherForecastService
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace GDE.Web.Data
+namespace GDE.We.Old.Data
 {
     public static class GlobalVariables
     {

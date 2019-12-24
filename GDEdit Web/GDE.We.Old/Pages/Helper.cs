@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using GDE.Web.Data;
+using GDE.We.Old.Data;
 
-namespace GDE.Web.Pages
+namespace GDE.We.Old.Pages
 {
     public static class Helper
     {
