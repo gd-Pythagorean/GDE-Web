@@ -1,0 +1,51 @@
+﻿<link rel="stylesheet" href="css/navbar.css"/>
+<style>
+	:root
+	{
+		--currentHue: @Helper.SectionToHueMap(GlobalVariables.CurrentSection);
+	}
+</style>
+<div class="header-wrap">
+	<div class="header">
+		<div class="header-left">
+			<div class="header-logo">
+				<img src="media/logo.svg" alt="Logo" draggable="false">
+				<h2>GD Edit</h2>
+			</div>
+			<div class="header-items" id="HeaderItems">
+				@foreach (var item in GlobalVariables.Links)
+				{
+					if (GlobalVariables.CurrentSection == item.Key)
+					{
+						<a class="header-item selected" href="@item.Value[0]">@item.Key.ToString()</a>
+					}
+					else
+					{
+						<a class="header-item" href="@item.Value[0]">@item.Key.ToString()</a>
+					}
+				}
+			</div>
+		</div>
+		<div class="header-account">
+			<div class="account-messages">
+				<img class="messages-icon" src="media/messages.svg" draggable="false" alt="messages">
+				<p class="messages-count">0</p>
+			</div>
+			<img class="account-icon" src="media/defaultProfile.png" draggable="false" alt="Profile">
+		</div>
+		<img class="header-menu-btn" id="navbarMenuBtn" src="media/menu.svg" alt="menu" onclick="ToggleNavMenuScript()" />
+	</div>
+</div>
+
+<script>
+	let hideNavBar = false;
+	
+	let NavMenuCssClass = hideNavBar ? "vis" : "";
+	
+    function ToggleNavMenuScript() {
+        hideNavBar = !hideNavBar;
+        
+        let element = document.getElementById('HeaderItems');
+        element.className = hideNavBar ? "header-items vis" : "header-items";
+    }
+</script>

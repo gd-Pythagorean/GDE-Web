@@ -1,32 +1,18 @@
 ﻿@import "PuristaFont.css";
-
-:root {
-    --userColor: hsl(var(--currentHue), 100%, 70%);
-    --pureHue: hsl(var(--currentHue), 100%, 50%);
-    --darkHue: hsl(var(--currentHue), 50%, 45%);
-
-    --l1: hsl(var(--currentHue), 40%, 70%);
-    --l2: hsl(var(--currentHue), 40%, 60%);
-    --l3: hsl(var(--currentHue), 40%, 50%);
-
-    --d1: hsl(var(--currentHue), 20%, 35%);
-    --d2: hsl(var(--currentHue), 20%, 30%);
-    --d3: hsl(var(--currentHue), 20%, 25%);
-    --d4: hsl(var(--currentHue), 20%, 20%);
-    --d5: hsl(var(--currentHue), 20%, 15%);
-    --d6: hsl(var(--currentHue), 20%, 10%);
-
-    --b1: hsl(var(--currentHue), 10%, 40%);
-    --b2: hsl(var(--currentHue), 10%, 30%);
-    --b3: hsl(var(--currentHue), 10%, 25%);
-    --b4: hsl(var(--currentHue), 10%, 20%);
-    --b5: hsl(var(--currentHue), 10%, 15%);
-    --b6: hsl(var(--currentHue), 10%, 10%);
-}
+@import "colorsheet.css";
 
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
+}
+
+a {
+    color: #fff;
+}
+
+a:hover {
+    color: #fff;
+    text-decoration: none !important;
 }
 
 .header-wrap {
