@@ -2,8 +2,7 @@
 {
     public static class Helper
     {
-        public static int SectionToHueMap(LinkItems section)
-            => section switch
+        public static int SectionToHueMap(LinkItems section) => section switch
             {
                 LinkItems.Home => 255,
                 LinkItems.Levels => 200,

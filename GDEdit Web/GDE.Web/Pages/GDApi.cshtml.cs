@@ -8,11 +8,11 @@ namespace GDE.Web.Pages
 {
     public class GDApiModel : PageModel
     {
-        private readonly ILogger<IndexModel> _logger;
+        private readonly ILogger<IndexModel> logger;
 
         public GDApiModel(ILogger<IndexModel> logger)
         {
-            _logger = logger;
+            this.logger = logger;
         }
         
         private DatabaseCollection databaseCollection = new DatabaseCollection();
