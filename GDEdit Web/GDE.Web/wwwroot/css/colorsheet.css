@@ -21,7 +21,3 @@
     --b5: hsl(var(--currentHue), 10%, 15%);
     --b6: hsl(var(--currentHue), 10%, 10%);
 }
-
-body {
-    background-color: var(--b6) !important;
-}

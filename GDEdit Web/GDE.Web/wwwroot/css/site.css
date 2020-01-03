@@ -1,4 +1,11 @@
-﻿.main {
+﻿@import "PuristaFont.css";
+
+html, body {
+    font-family: "purista", "Exo 2","Helvetica Neue",Tahoma,Arial,"Hiragino Kaku Gothic ProN",Meiryo,"Microsoft YaHei","Apple SD Gothic Neo",sans-serif !important;
+    font-weight: 300;
+}
+
+.main {
     margin-top: 20px;
 }
 
@@ -6,11 +13,28 @@
     color: white;
 }
 
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--d6) !important;
+}
+
 a {
-    color: white !important;
+    color: #fff;
 }
 
 a:hover {
-    color: white !important;
+    color: #fff;
     text-decoration: none !important;
+}
+
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid var(--d5);
+}
+
+.table td, .table th {
+    padding: .75rem;
+    vertical-align: top;
+    border-top: 1px solid var(--d5);
 }
