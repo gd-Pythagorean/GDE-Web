@@ -7,7 +7,7 @@
             LinkItems.Home => 255,
             LinkItems.Levels => 200,
             LinkItems.Community => 150,
-            LinkItems.Help => 35,
+            LinkItems.Help => 46,
             _ => 255
         };
     }
