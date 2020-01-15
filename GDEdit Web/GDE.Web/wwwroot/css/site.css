@@ -38,3 +38,64 @@ a:hover {
     vertical-align: top;
     border-top: 1px solid var(--d5);
 }
+
+/*  Buttons  */
+a, a:active, a:hover, a:link, a:visited {
+    outline-style: none;
+}
+
+.btn-big, .btn-big:active, .btn-big:focus, .btn-big:hover {
+    text-decoration: none;
+}
+
+.btn-big:active, .btn-big:focus, .btn-big:hover {
+    color: #fff;
+    background-color: var(--userColor);
+    transition: transform 2s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.btn-big:active {
+    transform: scale(0.9);
+}
+
+.btn-big {
+    outline: none;
+    margin: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: 4px;
+    border: none;
+    display: inline-block;
+    background-color: var(--darkHue);
+    transition: background-color .12s;
+    padding: 5px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 300;
+    overflow: hidden;
+    cursor: pointer;
+    text-transform: none;
+    white-space: nowrap;
+}
+
+.btn-big_content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-big_left {
+    margin: 0 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.btn-big_icon {
+    flex: none;
+    margin: 0 5px;
+    font-size: 150%;
+}
