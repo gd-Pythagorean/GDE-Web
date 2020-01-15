@@ -5,14 +5,14 @@ namespace GDE.Web.Data
 {
     public static class GlobalVariables
     {
-        private static LinkItems currentSection = LinkItems.Home;
+        private static LinkItems currentSection = LinkItems.home;
         
         public static LinkItems CurrentSection
         {
             get => currentSection;
             set
             {
-                if (Links.ContainsKey(value) || value == LinkItems.Error)
+                if (Links.ContainsKey(value) || value == LinkItems.error)
                     currentSection = value;
                 else
                     throw new Exception($"{value} is not inside the Links Dictionary");
@@ -24,43 +24,44 @@ namespace GDE.Web.Data
         public static Dictionary<LinkItems, string[]> Links = new Dictionary<LinkItems, string[]>
         {
             { 
-                LinkItems.Home,
+                LinkItems.home,
                 new []
                 {
                     "/",
-                    "News",
-                    "Team",
-                    "Changelog",
-                    "Download",
-                    "Search"
+                    "news",
+                    "team",
+                    "changelog",
+                    "download",
+                    "search"
                 }
             },
             {
-                LinkItems.Levels, 
+                LinkItems.levels, 
                 new []
                 {
                     "gdapi",
-                    "Listing"
+                    "listing"
                 }
             },
             {
-                LinkItems.Community,
+                LinkItems.community,
                 new []
                 {
                     "fetchdata",
-                    "Forums",
-                    "Contests"
+                    "forums",
+                    "contests",
+                    "projects"
                 }
             },
             {
-                LinkItems.Help, 
+                LinkItems.help, 
                 new []
                 {
                     "counter",
-                    "Wiki",
-                    "FAQ",
-                    "Rules",
-                    "No, Really, I need help!"
+                    "wiki",
+                    "faq",
+                    "rules",
+                    "no, really, i need help!"
                 }
             }
         };
@@ -68,10 +69,10 @@ namespace GDE.Web.Data
     
     public enum LinkItems
     {
-        Home,
-        Levels,
-        Community,
-        Help,
-        Error
+        home,
+        levels,
+        community,
+        help,
+        error
     }
 }

@@ -17,7 +17,7 @@ namespace GDE.Web.Pages
 
         public void OnGet()
         {
-            GlobalVariables.CurrentSection = LinkItems.Community;
+            GlobalVariables.CurrentSection = LinkItems.community;
             forecasts = forecastService.GetForecastAsync(DateTime.Now);
         }
     }

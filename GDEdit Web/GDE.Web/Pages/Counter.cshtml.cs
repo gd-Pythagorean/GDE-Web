@@ -7,7 +7,7 @@ namespace GDE.Web.Pages
     {
         public void OnGet()
         {
-            GlobalVariables.CurrentSection = LinkItems.Help;
+            GlobalVariables.CurrentSection = LinkItems.help;
         }
     }
 }

@@ -18,7 +18,7 @@ namespace GDE.Web.Pages
 
         public void OnGet()
         {
-            GlobalVariables.CurrentSection = LinkItems.Levels;
+            GlobalVariables.CurrentSection = LinkItems.levels;
             
             databaseCollection[0].UserLevels = new LevelCollection();
 
