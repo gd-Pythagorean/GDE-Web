@@ -12,7 +12,7 @@ namespace GDE.Web.Data
             get => currentSection;
             set
             {
-                if (Links.ContainsKey(value))
+                if (Links.ContainsKey(value) || value == LinkItems.Error)
                     currentSection = value;
                 else
                     throw new Exception($"{value} is not inside the Links Dictionary");
@@ -71,6 +71,7 @@ namespace GDE.Web.Data
         Home,
         Levels,
         Community,
-        Help
+        Help,
+        Error
     }
 }

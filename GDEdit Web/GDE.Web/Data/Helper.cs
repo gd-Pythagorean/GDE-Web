@@ -8,6 +8,7 @@
             LinkItems.Levels => 200,
             LinkItems.Community => 150,
             LinkItems.Help => 46,
+            LinkItems.Error => 333,
             _ => 255
         };
     }
