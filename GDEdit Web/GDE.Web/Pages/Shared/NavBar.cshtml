@@ -11,11 +11,35 @@
 				{
 					if (GlobalVariables.CurrentSection == item.Key)
 					{
-						<a class="header-item selected" href="@item.Value[0]">@item.Key.ToString()</a>
+						<div class="header-category selected">
+							<a href="@item.Value[0]" class="category-title">@item.Key.ToString()</a>
+							<div class="category-content">
+								@foreach (var val in item.Value)
+								{
+									//TODO: Remove this.
+									if (val != item.Value[0])
+									{
+										<a href="@val" class="header-item">@val</a>
+									}
+								}
+							</div>
+						</div>
 					}
 					else
 					{
-						<a class="header-item" href="@item.Value[0]">@item.Key.ToString()</a>
+						<div class="header-category">
+							<a href="@item.Value[0]" class="category-title">@item.Key.ToString()</a>
+							<div class="category-content">
+								@foreach (var val in item.Value)
+								{
+									//TODO: Remove this.
+									if (val != item.Value[0])
+									{
+										<a href="@val" class="header-item">@val</a>
+									}
+								}
+							</div>
+						</div>
 					}
 				}
 			</div>
