@@ -25,7 +25,7 @@ namespace GDE.Web.Data
                 LinkItems.Home,
                 new []
                 {
-                    "",
+                    "/",
                     "News",
                     "Team",
                     "Changelog",
@@ -62,13 +62,13 @@ namespace GDE.Web.Data
                 }
             }
         };
-        
-        public enum LinkItems
-        {
-            Home,
-            Levels,
-            Community,
-            Help
-        }
+    }
+    
+    public enum LinkItems
+    {
+        Home,
+        Levels,
+        Community,
+        Help
     }
 }
