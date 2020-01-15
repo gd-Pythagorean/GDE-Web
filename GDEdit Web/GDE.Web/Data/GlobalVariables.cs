@@ -40,7 +40,9 @@ namespace GDE.Web.Data
                 new []
                 {
                     "gdapi",
-                    "listing"
+                    "listing",
+                    "map packs",
+                    "featured",
                 }
             },
             {

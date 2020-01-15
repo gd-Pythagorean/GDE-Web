@@ -9,6 +9,11 @@
 			<div class="header-items" id="HeaderItems">
 				@foreach (var item in GlobalVariables.Links)
 				{
+					<style>
+						.section-@(item.Key.ToString()):before {
+						    background-color: hsl(@(Helper.SectionToHueMap(item.Key)), 100%, 50%) !important;
+						}
+					</style>
 					if (GlobalVariables.CurrentSection == item.Key)
 					{
 						<div class="header-category selected">
@@ -19,7 +24,7 @@
 									//TODO: Remove this.
 									if (val != item.Value[0])
 									{
-										<a href="@val" class="header-item">@val</a>
+										<a href="@val" class="header-item section-@item.Key.ToString()">@val</a>
 									}
 								}
 							</div>
@@ -35,7 +40,7 @@
 									//TODO: Remove this.
 									if (val != item.Value[0])
 									{
-										<a href="@val" class="header-item">@val</a>
+										<a href="@val" class="header-item section-@item.Key.ToString()">@val</a>
 									}
 								}
 							</div>
