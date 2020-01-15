@@ -19,6 +19,8 @@ namespace GDE.Web.Data
             }
         }
 
+        public static string ProjectName = "GD Web";
+
         public static Dictionary<LinkItems, string[]> Links = new Dictionary<LinkItems, string[]>
         {
             { 

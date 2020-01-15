@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     @if (ViewData["SubSection"] != null && (string) ViewData["SubSection"] != "")
     {
-        <title>@ViewData["SubSection"] · @ViewData["Title"] | GDEdit</title>
+        <title>@ViewData["SubSection"] · @ViewData["Title"] | @GlobalVariables.ProjectName</title>
     }
     else
     {
-        <title>@ViewData["Title"] | GDEdit</title>
+        <title>@ViewData["Title"] | @GlobalVariables.ProjectName</title>
     }
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
     <link rel="stylesheet" href="css/site.css">
