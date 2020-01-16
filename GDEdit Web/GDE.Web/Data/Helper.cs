@@ -6,9 +6,9 @@
         {
             LinkItems.home => 255,
             LinkItems.levels => 200,
-            LinkItems.community => 150,
+            LinkItems.community => 333,
             LinkItems.help => 46,
-            LinkItems.error => 333,
+            LinkItems.rankings => 115,
             _ => 255
         };
     }
