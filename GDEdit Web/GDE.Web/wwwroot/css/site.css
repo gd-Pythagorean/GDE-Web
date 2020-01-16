@@ -39,6 +39,12 @@ a:hover {
     border-top: 1px solid var(--d5);
 }
 
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /*  Buttons  */
 a, a:active, a:hover, a:link, a:visited {
     outline-style: none;

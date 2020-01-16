@@ -63,7 +63,7 @@
     align-items: stretch;
     color: white;
 }
-.header-items:hover .header-item {
+.header-items:hover .category-title {
     opacity: 0.5;
 }
 
@@ -76,7 +76,7 @@
     cursor: pointer;
     transition: 0.2s ease opacity;
 }
-.header-item:hover {
+.category-title:hover {
     opacity: 1 !important;
 }
 

@@ -11,7 +11,7 @@
 				{
 					<style>
 						.section-@(item.Key.ToString()):before {
-						    background-color: hsl(@(Helper.SectionToHueMap(item.Key)), 100%, 50%) !important;
+						    background-color: hsl(@(Helper.SectionToHueMap(item.Key)), 100%, 70%) !important;
 						}
 					</style>
 					if (GlobalVariables.CurrentSection == item.Key)
@@ -47,6 +47,15 @@
 						</div>
 					}
 				}
+				<div class="center">
+					<a class="btn-big" style="border-radius: 500px; height: 25px" href="/search">
+                    	<span class="btn-big_content">
+                    		<span class="fa-fw">
+                                <i class="fas fa-search"></i>
+                            </span>
+                    	</span>
+                    </a>
+				</div>
 			</div>
 		</div>
 		<div class="header-account">
