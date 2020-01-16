@@ -31,19 +31,19 @@ h2 {
 }
 
 .home-bg-image {
-    height: 70%;
-    width: 95%;
+    height: 100%;
+    width: 100%;
     top: 50%;
     transform: translateY(-50%);
     text-align: left;
     position: absolute;
     overflow: hidden;
+    z-index: -10;
 }
 
 .home-bg-image:before {
     content: "";
     position: absolute;
-    z-index: -1;
     width: 300%;
     height: 300%;
     top: -50%;
