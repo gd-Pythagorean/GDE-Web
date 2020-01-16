@@ -1,0 +1,25 @@
+﻿@page
+@model CounterModel
+
+@{
+    ViewData["SubSection"] = "counter";
+    ViewData["Title"] = "help";
+}
+
+<h1>Counter</h1>
+
+<p id="count">Current count: 0</p>
+
+<button class="home-btn-big btn-big" onclick="IncrementCount()">Click me</button>
+
+<script>
+let currentCount = 0;
+
+function IncrementCount()
+{
+    currentCount++;
+    
+    let element = document.getElementById("count");
+    element.innerText = `Current count: ${currentCount}`;
+}
+</script>

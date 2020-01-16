@@ -1,0 +1,93 @@
+﻿<link rel="stylesheet" href="css/navbar.css"/>
+<div class="header-wrap">
+	<div class="header">
+		<div class="header-left">
+			<div class="header-logo" id="logo">
+				<img src="media/logo.svg" alt="Logo" draggable="false">
+				<h2>@GlobalVariables.ProjectName</h2>
+			</div>
+			<div class="header-items" id="HeaderItems">
+				@foreach (var item in GlobalVariables.Links)
+				{
+					<style>
+						.section-@(item.Key.ToString()):before {
+						    background-color: hsl(@(Helper.SectionToHueMap(item.Key)), 100%, 70%) !important;
+						}
+					</style>
+					if (GlobalVariables.CurrentSection == item.Key)
+					{
+						<div class="header-category selected">
+							<a href="@item.Value[0]" class="category-title">@item.Key.ToString()</a>
+							<div class="category-content">
+								@foreach (var val in item.Value)
+								{
+									//TODO: Remove this.
+									if (val != item.Value[0])
+									{
+										<a href="@val" class="header-item section-@item.Key.ToString()">@val</a>
+									}
+								}
+							</div>
+						</div>
+					}
+					else
+					{
+						<div class="header-category">
+							<a href="@item.Value[0]" class="category-title">@item.Key.ToString()</a>
+							<div class="category-content">
+								@foreach (var val in item.Value)
+								{
+									//TODO: Remove this.
+									if (val != item.Value[0])
+									{
+										<a href="@val" class="header-item section-@item.Key.ToString()">@val</a>
+									}
+								}
+							</div>
+						</div>
+					}
+				}
+				<div class="center">
+					<a class="btn-big" style="border-radius: 500px; height: 25px" href="/search">
+                    	<span class="btn-big_content">
+                    		<span class="fa-fw">
+                                <i class="fas fa-search"></i>
+                            </span>
+                    	</span>
+                    </a>
+				</div>
+			</div>
+		</div>
+		<div class="header-account">
+			<div class="account-messages">
+				<img class="messages-icon" src="media/messages.svg" draggable="false" alt="messages">
+				<p class="messages-count">0</p>
+			</div>
+			<img class="account-icon" src="media/profiles/player-@(new Random().Next(144)).png" draggable="false" alt="Profile">
+		</div>
+		<img class="header-menu-btn" id="navbarMenuBtn" src="media/menu.svg" alt="menu" onclick="ToggleNavMenuScript()" />
+	</div>
+</div>
+
+<script>
+	let hideNavBar = false;
+	
+	let NavMenuCssClass = hideNavBar ? "vis" : "";
+	
+    function ToggleNavMenuScript() {
+        hideNavBar = !hideNavBar;
+        
+        let element = document.getElementById('HeaderItems');
+        element.className = hideNavBar ? "header-items vis" : "header-items";
+    }
+    
+    window.onscroll = () => {
+    	var logo = document.getElementById("logo");
+    	var sticky = logo.offsetTop;
+    	
+    	if (window.pageYOffset > sticky)
+    	    logo.classList.add("header-logo_mini");
+    	else
+    	    logo.classList.remove("header-logo_mini");
+    }
+</script>
