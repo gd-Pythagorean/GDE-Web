@@ -26,9 +26,18 @@
     <partial name="NavBar"/>
 </div>
 
-<div class="content px-4">
+<div class="content px-4" style="height: 100%">
     @RenderBody()
 </div>
 
+<footer class="footer">
+    <div class="footer_row">
+        <a class="footer_link" href="#">terms</a>
+        <a class="footer_link" href="#">privacy</a>
+        <a class="footer_link" href="#">status</a>
+        <a class="footer_link" href="https://github.com/gd-edit">organization</a>
+    </div>
+    <div class="footer_row">team zyran 2018-@DateTime.Now.Year</div>
+</footer>
 </body>
 </html>

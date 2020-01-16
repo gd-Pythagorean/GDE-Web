@@ -17,6 +17,12 @@ body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
     background-color: var(--d6) !important;
+
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    position: static;
+    height: 100%;
 }
 
 a {
@@ -43,6 +49,38 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* footer */
+.footer {
+    background-color: var(--d5);
+    color: hsl(var(--currentHue), 20%, 60%);
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    flex: none;
+    padding: 10px 0 5px;
+}
+
+.footer_row {
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    color: hsl(var(--currentHue), 20%, 60%);
+}
+
+.footer_link, .footer_link:active, .footer_link:focus, .footer_link:hover {
+    text-decoration: none;
+}
+
+.footer_link {
+    font-weight: 700;
+    color: #fff;
+    margin: 0 10px;
+}
+
+.footer_link:active, .footer_link:focus, .footer_link:hover {
+    color: var(--userColor) !important;
 }
 
 /*  Buttons  */
@@ -104,4 +142,28 @@ a, a:active, a:hover, a:link, a:visited {
     flex: none;
     margin: 0 5px;
     font-size: 150%;
+}
+
+/* scrollbar */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--d5);
+    border-radius: 50px;
+    margin: 10px 0;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--darkHue);
+    border-radius: 50px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--userColor);
 }
