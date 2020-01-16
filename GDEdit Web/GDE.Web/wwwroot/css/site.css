@@ -144,26 +144,27 @@ a, a:active, a:hover, a:link, a:visited {
     font-size: 150%;
 }
 
-/* scrollbar */
-/* width */
+/* special */
 ::-webkit-scrollbar {
     width: 10px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
     background: var(--d5);
     border-radius: 50px;
     margin: 10px 0;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
     background: var(--darkHue);
     border-radius: 50px;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: var(--userColor);
+}
+
+::selection {
+    color: #fff;
+    background-color: hsl(var(--currentHue),50%,45%);
 }

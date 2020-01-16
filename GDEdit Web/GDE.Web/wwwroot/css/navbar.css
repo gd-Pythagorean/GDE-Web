@@ -10,7 +10,7 @@
     display: flex;
     align-items: stretch;
     justify-content: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
 }
 
 .header-menu-btn {
@@ -49,7 +49,15 @@
     background: var(--darkHue);
     border: 10px solid var(--darkHue);
     border-radius: 10px;
+    transition: all 0.2s ease-out;
 }
+
+.header-logo_mini img {
+    width: 50px;
+    margin-top: 0;
+    border: 0 solid var(--darkHue);
+}
+
 .header-logo h2 {
     color: white;
     font-size: 25px;

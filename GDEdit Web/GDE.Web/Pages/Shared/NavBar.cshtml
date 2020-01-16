@@ -2,7 +2,7 @@
 <div class="header-wrap">
 	<div class="header">
 		<div class="header-left">
-			<div class="header-logo">
+			<div class="header-logo" id="logo">
 				<img src="media/logo.svg" alt="Logo" draggable="false">
 				<h2>@GlobalVariables.ProjectName</h2>
 			</div>
@@ -79,5 +79,15 @@
         
         let element = document.getElementById('HeaderItems');
         element.className = hideNavBar ? "header-items vis" : "header-items";
+    }
+    
+    window.onscroll = () => {
+    	var logo = document.getElementById("logo");
+    	var sticky = logo.offsetTop;
+    	
+    	if (window.pageYOffset > sticky)
+    	    logo.classList.add("header-logo_mini");
+    	else
+    	    logo.classList.remove("header-logo_mini");
     }
 </script>
