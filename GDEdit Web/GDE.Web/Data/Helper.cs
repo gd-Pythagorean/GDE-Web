@@ -9,6 +9,7 @@
             LinkItems.community => 333,
             LinkItems.help => 46,
             LinkItems.rankings => 115,
+            LinkItems.error => 333,
             _ => 255
         };
     }
